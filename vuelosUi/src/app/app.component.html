@@ -1,0 +1,32 @@
+
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="text-align: center;">
+            <h1>
+                {{ "Aerolinea" | translate }}
+            </h1>
+        </div>
+        <div class="card-body"><table class="table table-hover" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th> {{ "Vuelos" | translate }} </th>
+                    <th> {{ "Cambiar idioma" | translate }}</th>
+                </tr>
+            </thead>
+            <tBody>
+               <td><div class="container" style="text-align: center;">
+                <div class="container" style="text-align: center">     <button (click)="Listar()" class="btn btn-info" style="text-align: left"> {{ "Listar Vuelos" | translate }} </button> </div>
+                 </div></td>
+                    <td><div class="container">    
+                        <button (click)="cambiarIdioma('es')" class="btn btn-success" >{{ "Español" | translate }}</button>
+                        <button (click)="cambiarIdioma('en')" class="btn btn-danger">{{ "Ingles" | translate }}</button>
+                    </div></td> 
+            </tBody>
+        </table>
+            
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

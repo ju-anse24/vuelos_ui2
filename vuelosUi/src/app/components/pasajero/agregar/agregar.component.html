@@ -1,0 +1,39 @@
+<div class="container col- md - 6">
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                Agregar Pasajero
+            </h3>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Id Pasajero</label>
+                    <input type="text" class="form-control" [(ngModel)]="pasajero.idPasajero" name="origen">
+                </div>
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" [(ngModel)]="pasajero.nombre" name="destino">
+                </div>
+                <div class="form-group">
+                    <label for="">Edad</label>
+                    <input type="text" class="form-control" [(ngModel)]="pasajero.edad" name="fecha">
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" [(ngModel)]="pasajero.email" name="fecha">
+                </div>
+                <div class="form-group">
+                    <label for="">Telefono</label>
+                    <input type="text" class="form-control" [(ngModel)]="pasajero.telefono" name="fecha">
+                </div>
+                <button (click)="GuardarPasajero()" class="btn btn-success">
+                   Guardar
+                </button>
+                <button (click)="Volver()" class="btn btn-danger" style="margin-left: 10px;">
+                   Volver
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="text-align: center;">
+            <h3>
+              {{ "Opciones para pasajeros" | translate }}
+            </h3>
+        </div>
+        <div class="card-body"><table class="table table-hover" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th> {{ "Agregar" | translate }} </th>
+                    <th> {{ "Buscar" | translate }}</th>
+                </tr>
+            </thead>
+            <tBody>
+               <td><div class="container" style="text-align: center;">
+                        <button (click)="agregarPasajero()" class="btn btn-info" style="margin-right: 10px;"> {{ "Agregar Pasajero" | translate }}</button>
+                    </div></td>
+                    <td><div class="container">    
+                        <input type="text" class="input" name="idPasajero" [(ngModel)]="idPasajero">         
+                        <button (click)="buscar(idPasajero)" class="btn btn-info" style="margin-left: 10px;">
+                            {{ "Buscar" | translate }}
+                        </button>          
+                    </div></td> 
+            </tBody>
+        </table>
+            
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="text-align: center;">
+            <h3>
+                {{ "Listado de pasajeros" | translate }}
+            </h3>
+        </div>
+        <div class="card-body" style="text-align: center;">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th> {{ "Id Pasajero" | translate }}</th>
+                        <th> {{ "Nombre" | translate }}</th>
+                        <th> {{ "Edad" | translate }}</th>
+                        <th> {{ "Email" | translate }}</th>
+                        <th> {{ "Telefono" | translate }}</th>
+                        <th> {{ "Opciones" | translate }}</th>
+                    </tr>
+                </thead>
+                <tBody>
+                    <tr *ngFor="let pasajero of pasajeros" class="text-center">
+                        <td>{{pasajero.idPasajero}}</td>
+                        <td>{{pasajero.nombre}}</td>
+                        <td>{{pasajero.edad}}</td>
+                        <td>{{pasajero.email}}</td>
+                        <td>{{pasajero.telefono}}</td>
+                        <td>
+                            <button (click)="editarPasajero(pasajero)" class="btn btn-success" >{{ "Editar" | translate }}</button>
+                            <button (click)="eliminarPasajero(pasajero)" class="btn btn-danger">{{ "Eliminar" | translate }}</button>
+                        </td>
+                    </tr>
+                </tBody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
